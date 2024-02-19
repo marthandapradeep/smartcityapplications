@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Learn More</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="learnmore.css">
+</head>
+<script src="./confetti.js"></script>
+<script>
+	confetti.start();
+	const startit = () => {
+		setTimeout(function (){
+			console.log("start");
+			confetti.start();
+		}, 1000);
+	};	
+	
+	confetti.stop();
+	const stopit = () => {
+		setTimeout(function (){
+			console.log("stop");
+			confetti.stop();
+		}, 10000);
+	};	
+	
+	startit();
+	stopit();
+</script>
+<body>
+<div class="main_header">
+	<div class="center_div">
+		<p>
+		The application is categorized into 7 different verticals.<br>
+		Smart city applications gona give you the information<br> 
+		about the particular module the user have been choosed.<br>
+		Followed by the feedback form which you can give to our admin.<br>
+		So that the admin of our team will take up the problem and solve<br>
+		your issue by taking your problem into consideration and give you<br>
+		the better service and make you satisfied.
+		</p>
+	</div>
+</div>	
+</body>
+
+</html>

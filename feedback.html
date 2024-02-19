@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>FEEDBACK</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+	<link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+<form action="feedbacknext.php" method="POST">
+	<div class="container">
+		<div class="header">
+			<h1>FEEDBACK</h1>
+		</div>
+		<div class="main">
+			<form>
+				<span>
+					<i class="fa fa-user"></i>
+					<input type="text-area" placeholder=" User Name" name="username">
+				</span><br>	
+				<span>
+					<i class="fa fa-comment"></i>
+					<input type="textarea" rows="4" cols="50" placeholder="Your Suggession Here" name="comment">
+				</span><br>	
+				<label><font color="white" size="15px"> Your over all experience with us ?</label></font><br>
+  
+				<span class="star-rating">
+					<input type="radio" name="rating1" value="1"><i></i>
+					<input type="radio" name="rating1" value="2"><i></i>
+					<input type="radio" name="rating1" value="3"><i></i>
+					<input type="radio" name="rating1" value="4"><i></i>
+					<input type="radio" name="rating1" value="5"><i></i>
+				</span><br><br>
+				<button>Submit</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

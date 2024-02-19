@@ -1,0 +1,129 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.header{
+	color: #fff;
+	text-align: center;
+	font-family: algerian;
+	font-size: 30px;
+	letter-spacing: 5px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	
+}
+body{
+	background-image: url(http://localhost/idp/main%20page/wp4078429.jpg);
+	background-size: cover;
+	background-position: center;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.menu-bar{
+	background: transparent;
+	text-align: center;
+}
+.menu-bar ul{
+	display: inline-flex;
+	list-style: none;
+	color: #fff;
+}
+.menu-bar ul li{
+	width: 150;
+	margin: 15px;
+	padding: 15px;
+}
+.menu-bar ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+.active, .menu-bar ul li:hover{
+	background: #2bab0d;
+	border-radius: 30px;
+}
+.menu-bar .fa{
+	margin-right: 8px;
+}
+.sub-menu-1{
+	display: none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+	display: block;
+	position: absolute;
+	background: rgb(0,100,0);
+	margin-top: 15px;
+	margin-left: -15px;
+	
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+	display: block;
+	margin: 10px;	
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;	
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+	border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+	color: #b2ff00;
+}
+.fa-angle-right{
+	float: right;
+}
+.sub-menu-2{
+	display: none;
+}
+.hover-me:hover .sub-menu-2{
+	position: absolute;
+	display: block;
+	margin-top: -40px;
+	margin-left: 140px;
+	background: rgba(0,100,0)
+}
+.waves{
+	position: absolute;
+	height: -50px;
+	width: 100%;
+	bottom: -150px;
+	opacity: 1;
+}
+.patners{
+	padding: 0 80px;
+	position: relative;
+}
+.patners h3{
+	font-size: 28px;
+	margin-top: 500px;
+	margin-bottom: 0px;
+	text-align: left;
+}
+.patners hr{
+	border: none;
+	height: 4px;
+	width: 100px;
+	background-color: orange;
+}
+.patners-inner{
+	margin-top: 10px;
+}
+.patners-inner a{
+	display: inline-block;
+	width: 14%;
+	padding: 15px;
+	margin-right: 25px;
+	border: 1px solid #cacaca;
+	border-radius: 20px;
+	box-shadow: 0 5px 0 #cacaca;
+}
+.patners-inner img{
+	width: 100%;
+}
+	

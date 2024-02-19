@@ -1,0 +1,40 @@
+<html>
+<head>
+</head>
+<body>
+<table border="2">
+  <tr>
+    <td>username</td>
+    <td>comment</td>
+    <td>rating</td>
+  </tr>
+
+<?php
+
+$db = mysqli_connect("localhost","root","","smartcityapplications");
+
+if(!$db)
+{
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>
+
+<?php
+$records = mysqli_query($db,"select * from feedback");
+while($data = mysqli_fetch_array($records))
+{
+?>
+
+  <tr>
+    <td><?php echo $data['username']; ?></td>
+    <td><?php echo $data['comment']; ?></td>
+    <td><?php echo $data['rating']; ?></td>
+  </tr>	
+  </table>
+<?php
+mysqli_close($db);
+
+?>
+</table>
+</body>
+</html>

@@ -1,0 +1,111 @@
+
+<html>
+<head>
+	<title>login form</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<script>
+	function validatePassword()
+	{
+		var pass= document.login.password;
+      
+		if(pass.value != "" && !(pass.value.length >= 8 && pass.value.length <=20)) 
+		{
+			alert("Error: Password must contain at least 8 characters and Max of 20!");
+			return false;
+		}
+	}
+	</script>
+</head>
+<body>
+<form name="login" action = "mainhomepage.html" method = "GET">
+	<div class="container">
+		<div class="myCard">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="myLeftCtn">
+					
+					<form class="myForm text-center"><br><br><br><br><br><br>
+					<header>Open your account</header>
+					<div class="form-group">
+						<i class="fas fa-user"></i>
+						<input class="myInput" type="text" placeholder="Username" name="username" required>
+						<div class="invalid-feedback">Please fill out this feild.</div>
+					</div>
+						
+					<div class="form-group">
+						<i class="fas fa-envelope"></i>
+						<input class="myInput" type="text" placeholder="Email" name="email" required>	
+						<div class="invalid-feedback">Please fill out this feild.</div>
+					</div>	
+						
+					<div class="form-group">
+						<i class="fas fa-lock"></i>
+						<input class="myInput" type="password" placeholder="password" name="password" required>
+						<div class="invalid-feedback">Please fill out this feild.</div>
+					</div>
+							
+					<div class="form-group">
+						<label>
+							<input id="check_1" name="check_1" type="checkbox" required><small> I agree all the Terms & Conditions</small></input>
+							
+						</label>
+					</div>
+					<input type="submit" name="submit" class="butt" value="OPEN ACCOUNT">
+				</form>
+				</div>
+			</div>	
+				
+
+			<div class="col-md-6">
+				<div class="myRightCtn">
+					<div class="box"><header>Hello User!!!</header>
+					<p>This application gives you beter understanding about a particular city about the places here and what to visit where to stay and where to eat........so on like this information. If you are ver much instrested ones you create an account and have a look on this application.</p>
+					<p><center>!! Thank you !!</center></p>
+					<p>-Team
+					Smart City Applications lead</p><br>
+						<center><a href="learnmore.html" class="butt_out" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LEARN MORE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+				
+
+							
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</form>
+<?php
+if($_GET['submit'])
+{
+	$flag=0;
+    $a=$_GET['username'];
+    $b=$_GET['password'];
+	$query ="select * from register";
+	$data = mysqli_query($conn, $query);
+	while($result = mysqli_fetch_assoc($data))
+	{
+		if($result['username']==$a && $result['password']==$b)
+		{
+			$flag=1;
+			header("Location:mainhomepage.html");
+			exit();
+		}	
+	}
+	if(flag==0)
+	{
+		echo "Username and Password not matched";
+	}
+}
+?>
+</body>
+</html>
+</body>
+</html>

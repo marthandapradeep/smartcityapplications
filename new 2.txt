@@ -1,0 +1,11 @@
+<?php
+
+$db = mysqli_connect("localhost","root","","smartcityapplications");
+
+if(!$db)
+{
+    die("Connection failed: " . mysqli_connect_error());
+}
+$records = mysqli_query($db,"select * from login");
+
+?>

@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Thank you</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="thankyou.css">
+</head>
+<script src="./confetti.js"></script>
+<script>
+	confetti.start();
+	const startit = () => {
+		setTimeout(function (){
+			console.log("start");
+			confetti.start();
+		}, 1000);
+	};	
+	
+	confetti.stop();
+	const stopit = () => {
+		setTimeout(function (){
+			console.log("stop");
+			confetti.stop();
+		}, 10000);
+	};	
+	
+	startit();
+	stopit();
+</script>
+<body>
+<form action="practicehomepage1.html">
+<div class="main_header">
+	<div class="center_div">
+		<p>
+		Thank you so much for the feedback <br>
+		you provided on your support today.<br>
+		We really appreciate the time you took<br>
+		to help us improve our service.....<br> 
+		We value your thoughts and strive to provide<br>
+		you with the best customer experience possible.<br>
+		Thanks for being awesome customer !<br>
+		Best wishes ,<br>
+		Smart City Applications team.	
+		</p>
+		
+	</div>
+	<input type="submit" value="logout">
+</div>
+</form>	
+</body>
+
+</html>
